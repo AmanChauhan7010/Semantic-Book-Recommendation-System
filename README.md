@@ -97,6 +97,22 @@ The system currently manages a curated dataset of over **65,000** books.
 
 ---
 
+## 🚀 Run the FastAPI Server
+
+
+```bash
+# Start the API
+uvicorn api:app --reload
+
+#API will run at:
+http://127.0.0.1:8000
+
+#Swagger Docs:
+http://127.0.0.1:8000/docs
+```
+
+---
+
 ## 🛠️ Usage Guide
 
 ### 1. Data Pipeline
@@ -115,6 +131,12 @@ python3 run_pipeline.py --ingest --limit 20
 
 # Regenerate embeddings (required if model changes)
 python3 run_pipeline.py --embed
+
+# Run Transformation Phase
+python3 run_pipeline.py --transform
+
+# Run Storage Phase
+python3 run_pipeline.py --store
 ```
 
 ### 2. Launch the Application
@@ -126,6 +148,12 @@ streamlit run app.py
 The application will open automatically in your browser at `http://localhost:8501`.
 
 ---
+
+## 🌐 Live Deployment
+
+```bash
+https://semantic-book-recommendation-system-daumscds004.streamlit.app/
+```
 
 ## 👥 Contributors
 
